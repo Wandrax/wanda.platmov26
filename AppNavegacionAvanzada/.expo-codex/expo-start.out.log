@@ -1,0 +1,10 @@
+Starting project at C:\Users\leiaw\Documents\DSPM Jesi\MiPrimeraApp\AppNavegacionAvanzada
+React Compiler enabled
+Starting Metro Bundler
+Waiting on http://localhost:8082
+Logs for your project will appear below.
+Web node_modules\expo\AppEntry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web node_modules\expo\AppEntry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (716/758)
+λ node_modules\expo-router\node\render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.7% (733/734)
+λ Bundled 3692ms node_modules\expo-router\node\render.js (734 modules)
+Web Bundled 4544ms node_modules\expo\AppEntry.js (1035 modules)
