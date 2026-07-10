@@ -2,16 +2,20 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
+import { useTheme } from '../Context/ThemeContext';
+
 export default function AboutScreen() {
+  const { colors } = useTheme();
+
   return (
-    <View style={styles.container}>
-      <View style={styles.iconCircle}>
-        <Ionicons name="information-circle" size={46} color="#ea0c61" />
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
+      <View style={[styles.iconCircle, { backgroundColor: colors.warningSoft }]}>
+        <Ionicons name="information-circle" size={46} color={colors.warning} />
       </View>
-      <Text style={styles.title}>Acerca de</Text>
-      <Text style={styles.text}>
-        Práctica 07: combinación de DrawerNavigator, TabNavigator, rutas
-        protegidas e íconos personalizados en una app Expo.
+      <Text style={[styles.title, { color: colors.text }]}>Acerca de</Text>
+      <Text style={[styles.text, { color: colors.textMuted }]}>
+        Practica 08: Context API para tema global y autenticacion global,
+        integrada con la navegacion de la clase anterior.
       </Text>
     </View>
   );
@@ -20,14 +24,12 @@ export default function AboutScreen() {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: '#fcf8fb',
     flex: 1,
     justifyContent: 'center',
     padding: 24,
   },
   iconCircle: {
     alignItems: 'center',
-    backgroundColor: '#ffd5ea',
     borderRadius: 44,
     height: 88,
     justifyContent: 'center',
@@ -35,13 +37,11 @@ const styles = StyleSheet.create({
     width: 88,
   },
   title: {
-    color: '#2a0f1a',
     fontSize: 28,
     fontWeight: '800',
     marginBottom: 10,
   },
   text: {
-    color: '#69475b',
     fontSize: 16,
     lineHeight: 24,
     maxWidth: 340,
